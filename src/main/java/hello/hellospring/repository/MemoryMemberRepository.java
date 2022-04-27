@@ -6,9 +6,7 @@ import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository{
 
-    //TODO : 현업에서는 동시성문제가 발생할 수 있어서 concurent HashMap 사용
     private static Map<Long, Member> store = new HashMap<>();
-    //TODO : 어텀롱?? 동시성문제
     private static long sequence = 0L; // key값 생성
 
     @Override
